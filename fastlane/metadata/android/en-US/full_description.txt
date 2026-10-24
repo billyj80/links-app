@@ -1,0 +1,13 @@
+Links is a self-hosted services manager for Android. It gives you fast, organised access to all your home-server and self-hosted services directly from your phone.
+
+Features:
+• Add services with Tailscale, Cloudflare Tunnel, LAN and custom URL endpoints
+• App shortcuts tab — launch any installed app with a single tap
+• Colour-coded link pills for Tailscale, Cloudflare and LAN connections
+• Compact or expanded card layout
+• Full dark / light / system theme support
+• Backup and restore (JSON + Service Links Backup .txt format)
+• Reorder services and app shortcuts
+• Custom icons for services and app shortcuts (preset library or gallery image)
+• English and Polish language support
+• No accounts, no tracking, no internet required for the app itself
