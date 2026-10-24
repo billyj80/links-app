@@ -31,7 +31,7 @@ A free, open-source Android app for organising access to your self-hosted home-s
 
 ### Steps
 ```bash
-git clone https://github.com/billyj/links-app.git
+git clone https://github.com/billyj80/links-app.git
 cd links-app
 ./gradlew assembleRelease
 ```

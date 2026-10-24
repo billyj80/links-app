@@ -4,16 +4,16 @@ Categories:
 
 License: GPL-3.0-or-later
 
-AuthorName: billyj
+AuthorName: billyj80
 AuthorEmail: ''
-SourceCode: https://github.com/billyj/links-app
-IssueTracker: https://github.com/billyj/links-app/issues
+SourceCode: https://github.com/billyj80/links-app
+IssueTracker: https://github.com/billyj80/links-app/issues
 
 Name: Links
 AutoName: Links
 
 RepoType: git
-Repo: https://github.com/billyj/links-app
+Repo: https://github.com/billyj80/links-app
 
 Builds:
   - versionName: 1.0.0
