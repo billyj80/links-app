@@ -212,20 +212,20 @@ fun iconForService(icon: String, category: String): ImageVector {
         when (icon.trim().lowercase()) {
             "server", "dns", "nas"                    -> return Icons.Default.Dns
             "globe", "web", "browser", "internet"     -> return Icons.Default.Language
+            "vpn", "vpnlock", "tunnel", "wireguard"   -> return Icons.Default.VpnLock
             "media", "playcircle"                     -> return Icons.Default.PlayCircle
             "music", "audio", "sound"                 -> return Icons.Default.MusicNote
             "shield", "security", "guard"             -> return Icons.Default.Shield
-            "key", "vpn", "lock"                      -> return Icons.Default.VpnKey
+            "key", "vpnkey", "lock"                   -> return Icons.Default.VpnKey
             "file", "document", "doc"                 -> return Icons.Default.Description
             "terminal", "code", "dev"                 -> return Icons.Default.Code
             "storage", "folder"                       -> return Icons.Default.Folder
-            "bookmark"                                -> return Icons.Default.Bookmark
+            "bookmark", "book", "books", "read"       -> return Icons.Default.Bookmark
             "chat", "communication", "message"        -> return Icons.Default.Chat
             "home"                                    -> return Icons.Default.Home
             "cloud"                                   -> return Icons.Default.Cloud
             "gallery", "photo", "photos", "image"     -> return Icons.Default.PhotoLibrary
             "notes", "note"                           -> return Icons.Default.Notes
-            "book", "books", "read"                   -> return Icons.Default.Book
             "manager", "admin", "task"                -> return Icons.Default.TaskAlt
             "video", "movie", "film"                  -> return Icons.Default.Movie
             "share", "filesharing", "shared"          -> return Icons.Default.Share

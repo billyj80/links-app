@@ -37,37 +37,45 @@ import java.io.File
 import java.io.FileOutputStream
 
 val PresetAppIcons = listOf(
+    // Row 1: Network, Server & Cloud
     "Server" to Icons.Default.Dns,
     "Globe" to Icons.Default.Language,
+    "Cloud" to Icons.Default.Cloud,
+    "VPN" to Icons.Default.VpnLock,
+    "Home" to Icons.Default.Home,
+
+    // Row 2: Files, Storage & Data
+    "Storage" to Icons.Default.Folder,
+    "Share" to Icons.Default.Share,
+    "Sync" to Icons.Default.Sync,
+    "File" to Icons.Default.Description,
+    "Notes" to Icons.Default.Notes,
+
+    // Row 3: Media & Entertainment
     "Media" to Icons.Default.PlayCircle,
+    "Video" to Icons.Default.Movie,
     "Music" to Icons.Default.MusicNote,
+    "Gallery" to Icons.Default.PhotoLibrary,
+    "Bookmark" to Icons.Default.Bookmark,
+
+    // Row 4: Security, System & Communication
     "Security" to Icons.Default.Shield,
     "Key" to Icons.Default.VpnKey,
-    "File" to Icons.Default.Description,
     "Terminal" to Icons.Default.Code,
-    "Storage" to Icons.Default.Folder,
-    "Bookmark" to Icons.Default.Bookmark,
-    "Chat" to Icons.Default.Chat,
-    "Home" to Icons.Default.Home,
-    "Cloud" to Icons.Default.Cloud,
-    "Gallery" to Icons.Default.PhotoLibrary,
-    "Notes" to Icons.Default.Notes,
-    "Book" to Icons.Default.Book,
     "Manager" to Icons.Default.TaskAlt,
-    "Video" to Icons.Default.Movie,
-    "Share" to Icons.Default.Share,
-    "Sync" to Icons.Default.Sync
+    "Chat" to Icons.Default.Chat
 )
 
 fun vectorForAppIconName(name: String?): ImageVector? {
     if (name == null) return null
     return PresetAppIcons.firstOrNull { it.first.equals(name, ignoreCase = true) }?.second
         ?: when (name.lowercase()) {
+            "vpn", "vpnlock", "tunnel", "wireguard" -> Icons.Default.VpnLock
             "cloud" -> Icons.Default.Cloud
             "gallery", "photos", "photo" -> Icons.Default.PhotoLibrary
             "note", "notes" -> Icons.Default.Notes
-            "book", "books" -> Icons.Default.Book
-            "manager", "admin" -> Icons.Default.TaskAlt
+            "book", "books", "bookmark" -> Icons.Default.Bookmark
+            "manager", "admin", "task" -> Icons.Default.TaskAlt
             "video", "movie", "film" -> Icons.Default.Movie
             "share", "filesharing", "shared" -> Icons.Default.Share
             "sync", "synchronize" -> Icons.Default.Sync
