@@ -36,6 +36,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.window.DialogProperties
 import androidx.core.view.WindowCompat
 import com.home.servicelinks.data.LinksRepository
 import com.home.servicelinks.model.AppShortcut
@@ -817,13 +818,21 @@ fun LinksApp() {
             var appQuery by remember { mutableStateOf("") }
             AlertDialog(
                 onDismissRequest = { appPickerOpen = false },
+                properties = DialogProperties(usePlatformDefaultWidth = false),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 14.dp),
                 containerColor = MaterialTheme.colorScheme.surface,
                 titleContentColor = MaterialTheme.colorScheme.onSurface,
                 textContentColor = MaterialTheme.colorScheme.onSurface,
                 shape = RoundedCornerShape(24.dp),
                 title = { Text(strings.addAppShortcut, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onSurface) },
                 text = {
-                    Column(Modifier.heightIn(max = 500.dp)) {
+                    Column(
+                        Modifier
+                            .fillMaxWidth()
+                            .heightIn(max = 540.dp)
+                    ) {
                         OutlinedTextField(
                             value = appQuery,
                             onValueChange = { appQuery = it },
